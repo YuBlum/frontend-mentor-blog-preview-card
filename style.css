@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+:root {
+    --white:    hsl(0, 0%, 100%);
+    --yellow:   hsl(47, 88%, 63%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    --font-size-desktop-300: 0.875rem;
+    --font-size-desktop-400: 1rem;
+    --font-size-desktop-700: 1.5rem;
+
+    --font-size-mobile-400: 0.875rem;
+    --font-size-mobile-700: 1.25rem;
+
+    --font-weight-regular: 500;
+    --font-weight-bold:    800;
+
+    --spacing-300: 24px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+    --spacing-50:  4px;
+
+    --font-family: "Figtree", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    display: grid;
+    place-content: center;
+    min-block-size: 100vh;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 20px;
+    inline-size: 384px;
+    block-size: 522px;
+
+    padding: var(--spacing-300);
+}
+
+.card header img {
+    border-radius: 10px;
+}
+
+.card__main {
+    gap: var(--spacing-150);
+}
