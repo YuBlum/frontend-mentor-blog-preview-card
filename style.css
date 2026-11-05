@@ -1,3 +1,10 @@
+/*
+TODO:
+    - responsive layout
+    - change color of the title when hover
+ */
+
+
 *,
 *::before,
 *::after {
@@ -43,6 +50,7 @@ body {
     font-size: var(--font-size--desktop400);
     line-height: 1.5;
     letter-spacing: 0;
+    background-color: var(--yellow);
     place-content: center;
     min-block-size: 100vh;
 }
@@ -51,6 +59,8 @@ body {
 .card {
     border: 1px solid black;
     border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 8px 8px;
     max-inline-size: 384px;
 
     padding: var(--spacing-300);
