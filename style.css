@@ -1,6 +1,5 @@
 /*
 TODO:
-    - responsive layout
     - change color of the title when hover
  */
 
@@ -24,12 +23,10 @@ img {
     --gray-500: hsl(0, 0%, 42%);
     --gray-950: hsl(0, 0%, 7%);
 
-    --font-size-desktop-300: 0.875rem;
-    --font-size-desktop-400: 1rem;
-    --font-size-desktop-700: 1.5rem;
+    --font-size-300: 0.75rem;
+    --font-size-400: 0.875rem;
+    --font-size-700: 1.25rem;
 
-    --font-size-mobile-400: 0.875rem;
-    --font-size-mobile-700: 1.25rem;
 
     --font-weight-regular: 500;
     --font-weight-bold:    800;
@@ -42,33 +39,46 @@ img {
     --font-family: "Figtree", sans-serif;
 }
 
+@media (width > 375px) {
+    :root {
+        --font-size-300: 0.875rem;
+        --font-size-400: 1rem;
+        --font-size-700: 1.5rem;
+    }
+}
+
 body {
     font-family: var(--font-family);
     color: var(--gray-950);
     display: grid;
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size--desktop400);
+    font-size: var(--font-size-400);
     line-height: 1.5;
     letter-spacing: 0;
     background-color: var(--yellow);
     place-content: center;
     min-block-size: 100vh;
+    min-inline-size: auto;
 }
-
 
 .card {
     border: 1px solid black;
     border-radius: 20px;
     background-color: var(--white);
     box-shadow: 8px 8px;
-    max-inline-size: 384px;
+    max-inline-size: 327px;
 
     padding: var(--spacing-300);
 }
 
+@media (width > 375px) {
+    .card {
+        max-inline-size: 384px;
+    }
+}
+
 .card header img {
     border-radius: 10px;
-    max-inline-size: 336px;
 }
 
 .card__main {
@@ -82,13 +92,13 @@ body {
 .category-box {
     background-color: var(--yellow);
     border-radius: 4px;
-    font-size: var(--font-size-desktop-300);
+    font-size: var(--font-size-300);
     font-weight: var(--font-weight-bold);
     padding: var(--spacing-50) var(--spacing-150);
 }
 
 .card h1 {
-    font-size: var(--font-size-desktop-700);
+    font-size: var(--font-size-700);
     font-weight: var(--font-weight-bold);
 }
 
@@ -97,7 +107,7 @@ body {
 }
 
 .publishing-date {
-    font-size: var(--font-size-desktop-300);
+    font-size: var(--font-size-300);
 }
 
 .card footer {
@@ -111,6 +121,12 @@ body {
 
 .card footer p {
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-desktop-300);
+    font-size: var(--font-size-400);
     margin-inline-start: var(--spacing-150);
+}
+
+@media (width > 375px) {
+    .card footer p {
+        font-size: var(--font-size-300);
+    }
 }
